@@ -3,7 +3,7 @@ services:
   simple-nginx:
     build:
       target: application
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.simple-nginx
       context: .
       args:
         SERVICE_NAME: simple-nginx
