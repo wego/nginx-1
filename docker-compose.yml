@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+  simple-nginx:
+    build:
+      target: application
+      dockerfile: Dockerfile
+      context: .
+      args:
+        SERVICE_NAME: simple-nginx
+        ENV: "${ENV:?ENV}"
+        ANSIBLE_VAULT_PASS: "${ANSIBLE_VAULT_PASS:?ANSIBLE_VAULT_PASS}"
+    image: wego/simple-nginx-${ENV}
