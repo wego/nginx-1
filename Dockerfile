@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu:18.04
+FROM nginx:latest
 
 # Install Nginx.
 RUN \
